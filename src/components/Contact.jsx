@@ -7,10 +7,14 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import { keyboard } from "@testing-library/user-event/dist/keyboard";
 const defaultValues = {
   firstName: "",
   lastName: "",
   email: "",
+  companyName: "",
+  jobTitle: "",
+  phoneNumber: "",
   message: "",
 };
 
@@ -30,15 +34,6 @@ const Contact = () => {
     event.preventDefault();
     console.log(event);
     handleClickOpen();
-
-    fetch(REACT_APP_HA_WEBHOOK, {
-      method: "POST",
-      body: JSON.stringify({
-        name: formValues.name,
-        email: formValues.email,
-        message: formValues.message,
-      }),
-    });
   };
 
   const handleClickOpen = () => {
@@ -47,12 +42,14 @@ const Contact = () => {
 
   const handleClose = (value) => {
     setOpen(false);
+    setFormValues({ defaultValues });
+    document.getElementById("myForm").reset();
   };
 
   const [open, setOpen] = React.useState(false);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} id="myForm">
       <Grid
         container
         alignItems="center"
@@ -64,8 +61,8 @@ const Contact = () => {
         <Grid item>
           <TextField
             id="business-email"
-            name="business-email"
-            label="Email"
+            name="email"
+            label="Work Email"
             type="email"
             value={formValues.email}
             onChange={handleInputChange}
@@ -75,7 +72,7 @@ const Contact = () => {
         <Grid item>
           <TextField
             id="First-Name"
-            name="First-Name"
+            name="firstName"
             label="First Name"
             type="text"
             value={formValues.firstName}
@@ -86,10 +83,43 @@ const Contact = () => {
         <Grid item>
           <TextField
             id="Last-Name"
-            name="Last-Name"
+            name="lastName"
             label="Last Name"
             type="text"
             value={formValues.lastName}
+            onChange={handleInputChange}
+            required
+          />
+        </Grid>
+        <Grid item>
+          <TextField
+            id="Company-Name"
+            name="companyName"
+            label="Company Name"
+            type="text"
+            value={formValues.companyName}
+            onChange={handleInputChange}
+            required
+          />
+        </Grid>
+        <Grid item>
+          <TextField
+            id="Job-Title"
+            name="jobTitle"
+            label="Job Title"
+            type="text"
+            value={formValues.jobTitle}
+            onChange={handleInputChange}
+            required
+          />
+        </Grid>
+        <Grid item>
+          <TextField
+            id="Phone-Number"
+            name="phoneNumber"
+            label="Phone Number"
+            type="phone"
+            value={formValues.phoneNumber}
             onChange={handleInputChange}
             required
           />
@@ -116,11 +146,26 @@ const Contact = () => {
             aria-describedby="alert-dialog-description"
           >
             <DialogTitle id="alert-dialog-title">
-              {"Thanks for reaching out. I'll be in touch soon."}
+              {"Submitted Content"}
             </DialogTitle>
+            <DialogContent>
+              {formValues.email}
+              <br></br>
+              {formValues.firstName}
+              <br></br>
+              {formValues.lastName}
+              <br></br>
+              {formValues.companyName}
+              <br></br>
+              {formValues.jobTitle}
+              <br></br>
+              {formValues.phoneNumber}
+              <br></br>
+              {formValues.message}
+            </DialogContent>
             <DialogActions>
               <Button onClick={handleClose} autoFocus>
-                Cool!
+                Close
               </Button>
             </DialogActions>
           </Dialog>
