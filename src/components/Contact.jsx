@@ -5,9 +5,8 @@ import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
+
 const defaultValues = {
   firstName: "",
   lastName: "",
@@ -17,8 +16,6 @@ const defaultValues = {
   phoneNumber: "",
   message: "",
 };
-
-const REACT_APP_HA_WEBHOOK = process.env.REACT_APP_HA_WEBHOOK;
 
 const Contact = () => {
   const [formValues, setFormValues] = useState(defaultValues);
