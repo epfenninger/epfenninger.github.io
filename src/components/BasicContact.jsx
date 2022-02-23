@@ -17,7 +17,7 @@ const defaultValues = {
   message: "",
 };
 
-const Contact = () => {
+const BasicContact = () => {
   const [formValues, setFormValues] = useState(defaultValues);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -171,4 +171,4 @@ const Contact = () => {
     </form>
   );
 };
-export default Contact;
+export default BasicContact;
