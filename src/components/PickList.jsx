@@ -46,7 +46,8 @@ const HiddenFields = () => {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <form onSubmit={handleSubmit} id="myForm">
+    <form onSubmit={handleSubmit} id="PickList-Form">
+      <p style={{ color: "black" }}>Alternate Value Picklists</p>
       <Grid
         container
         alignItems="center"
@@ -116,6 +117,28 @@ const HiddenFields = () => {
             name="phoneNumber"
             label="Phone Number"
             type="phone"
+            value={formValues.phoneNumber}
+            onChange={handleInputChange}
+            required
+          />
+        </Grid>
+        <Grid item>
+          <TextField
+            id="Country"
+            name="Country"
+            label="Country"
+            type="dropdown"
+            value={formValues.phoneNumber}
+            onChange={handleInputChange}
+            required
+          />
+        </Grid>
+        <Grid item>
+          <TextField
+            id="State"
+            name="State"
+            label="State"
+            type="text"
             value={formValues.phoneNumber}
             onChange={handleInputChange}
             required

@@ -51,6 +51,7 @@ const HiddenFields = () => {
       <Helmet>
         <meta http-equiv="X-Frame-Options" content="deny"></meta>
       </Helmet>
+      <p style={{ color: "black" }}>iFrame Blocked from Loading</p>
       <form onSubmit={handleSubmit} id="myForm">
         <Grid
           container

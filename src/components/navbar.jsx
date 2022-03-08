@@ -23,8 +23,14 @@ class NavBar extends React.Component {
               <Link to="/" style={linkStyle}>
                 Home
               </Link>
-              <Link to="/HiddenFields" style={linkStyle}>
-                HiddenFields
+              <Link to="/PickList" style={linkStyle}>
+                Picklist
+              </Link>
+              <Link to="/BlockedIframe" style={linkStyle}>
+                BlockedIframe
+              </Link>
+              <Link to="/NoId" style={linkStyle}>
+                NoID
               </Link>
             </Typography>
           </Toolbar>

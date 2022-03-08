@@ -46,8 +46,8 @@ const BasicContact = () => {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <form onSubmit={handleSubmit} id="myForm">
-      <p style={{ color: "black" }}>Basic Form</p>
+    <form onSubmit={handleSubmit}>
+      <p style={{ color: "black" }}>No Form IDs</p>
       <Grid
         container
         alignItems="center"
@@ -58,8 +58,6 @@ const BasicContact = () => {
       >
         <Grid item>
           <TextField
-            id="business-email"
-            name="email"
             label="Work Email"
             type="email"
             value={formValues.email}
@@ -69,8 +67,6 @@ const BasicContact = () => {
         </Grid>
         <Grid item>
           <TextField
-            id="First-Name"
-            name="firstName"
             label="First Name"
             type="text"
             value={formValues.firstName}
@@ -80,8 +76,6 @@ const BasicContact = () => {
         </Grid>
         <Grid item>
           <TextField
-            id="Last-Name"
-            name="lastName"
             label="Last Name"
             type="text"
             value={formValues.lastName}
@@ -91,8 +85,6 @@ const BasicContact = () => {
         </Grid>
         <Grid item>
           <TextField
-            id="Company-Name"
-            name="companyName"
             label="Company Name"
             type="text"
             value={formValues.companyName}
@@ -102,8 +94,6 @@ const BasicContact = () => {
         </Grid>
         <Grid item>
           <TextField
-            id="Job-Title"
-            name="jobTitle"
             label="Job Title"
             type="text"
             value={formValues.jobTitle}
@@ -113,8 +103,6 @@ const BasicContact = () => {
         </Grid>
         <Grid item>
           <TextField
-            id="Phone-Number"
-            name="phoneNumber"
             label="Phone Number"
             type="phone"
             value={formValues.phoneNumber}
@@ -124,8 +112,6 @@ const BasicContact = () => {
         </Grid>
         <Grid item>
           <TextField
-            id="message-input"
-            name="message"
             label="Message"
             type="text"
             value={formValues.message}
