@@ -4,13 +4,13 @@ import NavBar from "./components/navbar";
 import BlockedIframe from "./components/BlockedIframe";
 import PickList from "./components/PickList";
 import NoID from "./components/NoID";
-import { BrowserRouter as HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <HashRouter>
+        <Router>
           <NavBar />
           <Routes>
             <Route path="/" element={<Contact />} />
@@ -18,7 +18,7 @@ function App() {
             <Route path="/BlockedIframe" element={<BlockedIframe />} />
             <Route path="/NoID" element={<NoID />} />
           </Routes>
-        </HashRouter>
+        </Router>
       </header>
     </div>
   );
