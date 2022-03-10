@@ -1,5 +1,5 @@
 import "./App.css";
-import Contact from "./components/BasicContact.jsx";
+import FormApp from "./components/FormApp";
 import NavBar from "./components/navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <Router>
           <NavBar />
-          <Contact />
+          <FormApp />
         </Router>
       </header>
     </div>

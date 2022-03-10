@@ -15,7 +15,7 @@ script.addEventListener("load", () => {
   }
 });
 
-class formApp extends Component {
+class Hubspot extends React.Component {
   state = {};
   render() {
     return (
@@ -26,4 +26,4 @@ class formApp extends Component {
   }
 }
 
-export default formApp;
+export default Hubspot;
