@@ -45,21 +45,6 @@ const BasicContact = () => {
 
   const [open, setOpen] = React.useState(false);
 
-  const script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "https://js.hsforms.net/forms/v2.js";
-  document.body.appendChild(script);
-
-  script.addEventListener("load", () => {
-    if (window.hbspt) {
-      window.hbspt.forms.create({
-        portalId: "21341458",
-        formId: "8134d08c-1ff6-4e0c-b50c-31093bc9ef18",
-        target: "#hubspotForm",
-      });
-    }
-  });
-
   return (
     <div>
       <form onSubmit={handleSubmit} id="myForm">
@@ -186,9 +171,6 @@ const BasicContact = () => {
           </Grid>
         </Grid>
       </form>
-      <div>
-        <div id="hubspotForm"></div>
-      </div>
     </div>
   );
 };
