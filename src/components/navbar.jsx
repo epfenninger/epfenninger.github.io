@@ -23,7 +23,7 @@ class NavBar extends React.Component {
               <Link to="/" style={linkStyle}>
                 Home
               </Link>
-              <Link to="/BlockedIframe" style={linkStyle}>
+              <Link to="/blockediframe" style={linkStyle}>
                 Blocked Iframe Version
               </Link>
             </Typography>
