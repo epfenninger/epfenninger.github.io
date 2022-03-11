@@ -2,6 +2,8 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import BasicContact from "./BasicContact";
 import Hubspot from "./Hubspot";
+import NoID from "./NoID";
+import ChangingFormID from "./ChangingFormID";
 
 const linkStyle = {
   margin: "1rem",
@@ -16,6 +18,8 @@ class FormApp extends React.Component {
     return (
       <div>
         <BasicContact />
+        <ChangingFormID />
+        <NoID />
         <Hubspot />
       </div>
     );
